@@ -30,11 +30,11 @@ def users_Post():
             lista = users_locs
         return {'post': lista} 
     except:
-        return 'No es un grupo publico'
+        return 'No es un grupo publico de Facebook'
 
 @app.route('/') 
 def inicio():
-    return "<h1>Facebook</h1>"
+    return "<h1> Api para Facebook</h1>"
 
 if __name__ == "__main__":
     app.run()
