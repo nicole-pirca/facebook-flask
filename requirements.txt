@@ -2,3 +2,4 @@ Flask
 flask-cors
 facebook_scraper
 gunicorn
+Facebook_Scraper
