@@ -2,7 +2,7 @@ from flask import Flask, request
 from flask_cors import CORS
 from facebook_scraper import get_posts
 import re
-import time
+
 app = Flask(__name__)
 CORS(app)
 
@@ -15,9 +15,7 @@ def users_Post():
     try:
 #caracolradio, SaludEcuador, bbcnews, SaludEcuador, MinisterioDeGobiernoEcuador,lahoraecuador, elcomerciocom 
         group = request.args.get('group')
-        time.sleep(2.4)
         posts = get_posts(group, pages=10)
-        time.sleep(2.4)
         for post in posts:
             fecha = re.sub(tag_regex_fecha, '', str(post['time']))
             fechaG = re.sub('-', '/', fecha)
@@ -36,7 +34,7 @@ def users_Post():
 
 @app.route('/') 
 def inicio():
-    return "<h1> Api Facebook</h1>"
+    return "<h1> Api para Facebook</h1>"
 
 if __name__ == "__main__":
     app.run()
