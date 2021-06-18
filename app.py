@@ -4,6 +4,7 @@ from facebook_scraper import get_posts
 import re
 
 app = Flask(__name__)
+app.debug = True
 CORS(app)
 
 # RED SOCIAL DE FACEBOOK 
