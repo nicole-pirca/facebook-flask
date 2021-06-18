@@ -9,6 +9,7 @@ CORS(app)
 tag_regex_fecha = '([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?|GMT'
 @app.route('/postFacebook') 
 
+
 def users_Post():
 #caracolradio, SaludEcuador, bbcnews, SaludEcuador, MinisterioDeGobiernoEcuador,lahoraecuador, elcomerciocom 
     group = request.args.get('group')
