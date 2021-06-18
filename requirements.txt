@@ -6,3 +6,4 @@ fastcache==1.1.0
 filelock==3.0.12
 Flask==1.1.1
 Flask-Cors==3.0.10
+gunicorn
