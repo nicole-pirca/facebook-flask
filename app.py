@@ -36,7 +36,7 @@ def users_Post():
 
 @app.route('/') 
 def inicio():
-    return "<h1> Api para Facebook</h1>"
+    return "<h1> Api Facebook</h1>"
 
 if __name__ == "__main__":
     app.run()
