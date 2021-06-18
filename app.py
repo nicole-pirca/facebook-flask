@@ -14,21 +14,8 @@ tag_regex_fecha = '([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?|GMT'
 def users_Post():
     try:
 #caracolradio, SaludEcuador, bbcnews, SaludEcuador, MinisterioDeGobiernoEcuador,lahoraecuador, elcomerciocom 
-        group = request.args.get('group')
-        posts = get_posts(group, pages=10)
-        for post in posts:
-            fecha = re.sub(tag_regex_fecha, '', str(post['time']))
-            fechaG = re.sub('-', '/', fecha)
-            users_locs = [{
-                'descripcion': post['text'],
-                'fecha': re.sub(r'(\d+)/(\d+)/(\d+)', r'\3/\2/\1', fechaG),
-                'calificacion': '',
-                'link':post['post_url'],
-                'social':'Facebook',
-                'noticia': post['text']
-            } for post in  posts ]
-            lista = users_locs
-        return {'post': lista} 
+        
+        return 'post'
     except:
         return 'No es un grupo publico de Facebook'
 
