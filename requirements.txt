@@ -3,6 +3,6 @@ flask-cors
 gunicorn
 facebook-scraper==0.2.42
 fake-useragent==0.1.11
-facebook-scraper @ git+https://github.com/kevinzg/facebook-scraper.git@54e962729990b49f1ac55ca83c7ac08be665b393
+#facebook-scraper @ git+https://github.com/kevinzg/facebook-scraper.git@54e962729990b49f1ac55ca83c7ac08be665b393
 facebook-sdk==3.1.0
 
